@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/web/thymeleaf/layout">
+
+<head>
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta http-equiv="Content-Language" content="en"/>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, shrink-to-fit=no"/>
+    <meta name="description" content="This is an example dashboard created using build-in elements and components."/>
+    <meta name="msapplication-tap-highlight" content="no">
+
+    <link th:href="@{/musicforlife/admin/assets/main.css}" rel="stylesheet">
+</head>
+<body>
+<div class="app-container app-theme-white body-tabs-shadow fixed-sidebar fixed-header">
+    <!--  HEADER -->
+    <div th:replace="fragments/header :: header"></div>
+
+
+    <div class="app-main">
+        <!-- SIDEBAR -->
+        <div th:replace="fragments/sidebar :: sidebar"></div>
+
+        <div class="app-main__outer">
+
+            <!--MAIN-->
+            <div layout:fragment="main-content"></div>
+
+
+            <!-- FOOTER-->
+            <div th:replace="fragment/footer :: footer"></div>
+
+        </div>
+        <script src="http://maps.google.com/maps/api/js?sensor=true"></script>
+    </div>
+</div>
+<script type="text/javascript" th:src="@{/musicforlife/admin/assets/scripts/main.js}"></script>
+</body>
+</html>
